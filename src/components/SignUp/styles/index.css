@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
+html,
+body {
+  margin: 0;
+  font-family: "Noto Serif JP", serif !important;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom-Css */
+body > #root > div {
+  height: 100vh;
+}
+.SignUpcontainer{ 
+  display: flex;
+  justify-content: space-around;
+  margin:0 !important;
+  height: 100vh;
+  
+  align-items: center;
+  background-color: #232323;
+}
+
+@media (min-width:1200px) {
+.SignUpcontainer {
+  max-width:1400px !important;
+}
+
+}
+
+
+@media only screen and (max-width: 1050px) {
+  .SignUpcontainer {
+    flex-direction: column;
+    height: 100%;
+    max-width:100vw;
+  }
+}
+
+.section-hero {
+  flex: 0 0 45%;
+  height: 80%;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #fff;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+@media only screen and (max-width: 1050px) {
+  .section-hero {
+    height: 50vh;
+    flex: unset;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+.form-container {
+  height: 100%;
+  flex: 0 0 40%;
+  align-items: center;
+}
+
+.form-group-container {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 1050px) {
+  .form-container {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .form-group-container {
+    border-radius: 0;
+  }
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: auto;
+}
+
+@media only screen and (max-width: 1120px) {
+  .form-row {
+    display: block;
+  }
+
+  .form-row .form-group {
+    width: 65%;
+  }
+}
+
+.form-title {
+  background-color: #232323;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: auto;
+}
+
+.button-file {
+  width: 18rem;
+  padding: 1.3rem !important;
+}
+
+.margin-top-auto {
+  margin-top: auto;
+}
