@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { makeStyles } from '@material-ui/core/styles';
 import firebase from 'firebase'
+import {MYloader} from '../LoadingScreen/Loader'
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: 'white'
@@ -68,15 +69,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default  ({}) => {
+export default  ({uid}) => {
   const classes = useStyles();
   const [shopData, setShopData] = useState(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    async function fetchShop() {
-      const uid = firebase.auth().currentUser.uid
-      
+    async function fetchShop(uid) {
+
       try {
         const { data } = await axios.get(
           `https://us-central1-downtown-97d7d.cloudfunctions.net/webAppConnect/getShop?uid=${uid}`,
@@ -87,7 +87,7 @@ export default  ({}) => {
         setError(error.data.response.message);
       }
     }
-    fetchShop();
+    fetchShop(uid);
   }, []);
 
   if (shopData) {
@@ -156,28 +156,14 @@ export default  ({}) => {
         </div>
 
         <Grid className={classes.shopAbout}>
-          <Typography variant="h1">
-            What is your shop about?
-          </Typography>
-          <Typography variant="body2">
-            Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. Vestibulum tortor quam,
-            feugiat vitae, ultricies eget, tempor sit amet, ante.
-            Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.
-            Quisque sit amet est et sapien ullamcorper pharetra.
-            Vestibulum erat wisi, condimentum sed, commodo vitae,
-            ornare sit amet, wisi. Aenean fermentum, elit eget
-            tincidunt condimentum, eros ipsum rutrum orci, sagittis
-            tempus lacus enim ac dui.
-          </Typography>
+       
         </Grid>
       </div>
     );
   } else if (error) {
     return <Typography color="error">{error}</Typography>;
   } else {
-    return <CircularProgress color="secondary" />;
+    return <MYloader/>
   }
 };
 

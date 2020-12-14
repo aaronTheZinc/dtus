@@ -9,12 +9,13 @@ import Layout2 from './components/Layout/Layout2';
 import HomePage from './components/Home/index';
 import SignUp from './components/SignUp/index'
 import AccountDetail from './components/AccountDetail';
+import {AdminDash} from './components/AdminPanel/AdminPanelView'
 import ProductPage from './components/Products';
 import ShopProduct from './components/ShopProduct';
 import register from './preRegister/main'
 import { SIGN_IN } from './constants/routes';
 import Login from './components/SignIn'
-import AdminDash from './components/AdminPanel/AdminPanelView'
+// import AdminDash from './components/AdminPanel/AdminPanelView'
 import firebase from 'firebase'
  const uid = firebase.auth
 export default [
