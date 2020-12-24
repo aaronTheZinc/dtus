@@ -1,23 +1,23 @@
 import React, {Component} from 'react'
-import firebase from '../Firebase/firebase'
+import firebase from 'firebase'
 import Shop from './ShopView'
 import { withAuthorization, withEmailVerification } from '../Session';
 class ShopProduct extends Component {
      constructor(props) {
    super(props)
-   console.log(this.props.userId)
    this.state = {
-
+   uid:''
    }
      }
 componentDidMount() {
 
 }
 
+
     render() {
-
+const  {uid} = this.state
 return (<Shop
-
+       uid={uid}
 />)
     }
 }

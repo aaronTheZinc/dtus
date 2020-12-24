@@ -182,32 +182,10 @@ if(this.state.isComplete)
 
     return (
 
-<div style={{backgroundColor:'black', height:'1000px'}}>
-      <SignUpView
-      
-      handleChange={this.handleChange}
-      password={password}
-      submit={this.onSubmit}
-      email={email}
-      mainIsShow={mainIsShow}
-      setInput={this.setInput}
-      incomplete={incomplete}
-      click={this.click}
-      isComplete={isComplete}
-      errText={errText}
-      secondaryErr={secondaryErr}
-      logoIsUL={logoIsUL}
-      bannerUL={bannerUL}
-      logoOnDrop={this.logoOnDrop}
-      bannerOnDrop={this.bannerOnDrop}
-      stage2={this.stage2}
-      // onSubmit={this.onSubmit}
-      shopComplete={this.shopComplete}
 
-      
-      
+      <SignUpView
       />
-      </div>
+
       // <form onSubmit={this.onSubmit}>
       //   <input
       //     name="username"

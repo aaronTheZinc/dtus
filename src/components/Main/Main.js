@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Video from './video.mp4'
 import { Button } from "shards-react"
 
 import "./Main.css"
@@ -33,7 +33,9 @@ class Main extends Component {
 
           <div id="xhr">
             <div id="h">
-
+        {/* <video className='video' autoPlay loop muted style={{width:'100%', height:'100%'}}>
+          <source src={Video} type='video/mp4'></source>
+        </video> */}
               <div id="h-pagi-container">
                 <div id="h-pagi-wrap" style={{ transform: "translate3d(0.001px, 0px, 0px)" }}>
                   <div id="h-pagi" style={{ transform: "translate3d(0px, 0%, 0px)", color: "black" }}>
@@ -54,6 +56,7 @@ class Main extends Component {
 
                     </span>
                     </h2>
+                    {/* </h2>
                     <div className="h-title-stroke-container">
                       <div className="h-title-stroke-wrap">
                         <div className="h-title-stroke"
@@ -147,8 +150,8 @@ class Main extends Component {
 
                     <div className="paragraph">
                       The cost of oppening an account is free. Premium Options are Availible
-                    </div>
-
+                    </div> */}
+               {/* <div className="boxcont" >
                     <div className="priceBox">
 
                       <div class="[ price-option price-option--low ]">
@@ -181,11 +184,20 @@ class Main extends Component {
                   <div style={{ width: "20%" }}>
 
                   </div>
+                  
                 </div>
+                </section>
 
               </div>
+              */}
 
             </div>
+            </section>
+            </div>
+            </div>
+            
+
+            </div> 
 
           </div>
 
@@ -202,15 +214,7 @@ class Main extends Component {
                 </span>
               </a>
             </div>
-            <div className="nav-link-wrap">
-              <a className="nav-link active" href="/signin">
-                <span
-                  className="nav-link-inner" style={{ transform: "translate3d(0px, 0%, 0px)" }}>
-                  <span
-                    className="nav-link-black" style={{ pointerEvents: "visible", fontSize: "18px", opacity: 1, display: "block", margin: "0px" }}>Login</span>
-                </span>
-              </a>
-            </div>
+          
             <div className="nav-link-wrap" style={{ opacity: 1 }}>
               <a className="nav-link active" href="/signup"><span className="nav-link-inner"
                 style={{ transform: "translate3d(0px, 0%, 0px)" }}>
@@ -226,7 +230,7 @@ class Main extends Component {
         </div>
 
 
-      </div>
+
 
     )
   }

@@ -1,0 +1,82 @@
+@media screen and (min-width: 980px) /* Desktop */ {
+    .signupcontainer{
+        background-image:url('../Forms/images/background.png');
+        background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    }
+    .formView {
+        width: 30%;
+        height: 500px;
+        margin-left: 60%;
+        padding-top: 10%;
+    
+    }
+    
+    .innerSU {
+        /* box-shadow: -16px 10px 11px 5px rgba(0,0,0,0.52); */
+        height: 500px;
+      border-width: 10px;
+    }
+    #mobileImage {
+        visibility: hidden;
+    }
+    #hm {
+        background-image:url('../Forms/images/background.png');
+    
+    height: 100%;
+    width: 100%;
+    }
+    #headTag {
+        font-size: 40px;
+        color: 'black'
+    }
+    body {
+    
+        /* background-image:url('../Forms/images/background.png');
+        background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    
+    }
+  }
+  
+  @media screen  and (max-width: 979px) /* Tablet */ {
+    body {
+      background: blue;
+    }
+    #mobileImage {
+        visibility: hidden;
+    }
+  }
+  
+  @media screen and (max-width: 800px) /* Mobile */ {
+    .signupcontainer{
+        background-image:url('../Forms/images/background.png');
+        background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    }
+    .formView {
+        margin-top: 15%;
+        width: 500px;
+        height: 500px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        
+    
+    }
+    #headTag {
+        font-size: 30px;
+        font-weight: bold;
+        color: 'black'
+    }
+  }
+
+
+

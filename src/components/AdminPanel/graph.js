@@ -10,13 +10,13 @@ const BarChart = () => {
       <Line
         style={{borderRadius: '40px'}}
         data={{
-          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
           datasets: [
             {
               label: 'Orders This Week',
-              data: [12, 19, 3, 5, 2, 3],
+              data: [0, 8, 1, 5, 0, 5, 5],
               backgroundColor: [
-                'rgb(0, 0, 0)'
+                'rgb(255, 255, 255)'
                 // 'rgba(255, 99, 132, 0.2)',
                 // 'rgba(54, 162, 235, 0.2)',
                 // 'rgba(255, 206, 86, 0.2)',
@@ -52,7 +52,7 @@ const BarChart = () => {
           },
           legend: {
             labels: {
-              fontSize: 25,
+              fontSize: 15,
             },
           },
         }}

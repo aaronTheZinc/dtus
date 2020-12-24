@@ -78,11 +78,22 @@ export default  ({uid}) => {
     async function fetchShop(uid) {
 
       try {
-        const { data } = await axios.get(
-          `https://us-central1-downtown-97d7d.cloudfunctions.net/webAppConnect/getShop?uid=${uid}`,
-        );
-        console.log(data)
-        setShopData(data);
+        firebase.auth().onAuthStateChanged(async(user) => {
+          if (user) {
+          const uid =  user.uid;
+          const { data } = await axios.get(
+            `https://us-central1-downtown-97d7d.cloudfunctions.net/webAppConnect/getShop?uid=${uid}`,
+          );
+          console.log(data)
+          setShopData(data);
+            //  alert(user.uid)
+            // User is signed in.
+          } else {
+              alert('no auth')
+            // No user is signed in.
+          }
+        });
+   
       } catch (error) {
         setError(error.data.response.message);
       }
